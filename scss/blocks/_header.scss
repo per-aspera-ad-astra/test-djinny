@@ -1,0 +1,67 @@
+.header {
+	border-bottom: 1px solid $border-color;
+
+	.nav-link {
+		color: var(--color-text-secondary);
+
+		&.active {
+			color: var(--color-text-secondary);
+			font-weight: 700;
+		}
+	}
+
+	&-search {
+		color: $secondary-color;
+		position: relative;
+
+		input {
+			background-color: #eee;
+			border: 0;
+		}
+
+		i {
+			height: 24px;
+			left: 12px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 24px;
+		}
+	}
+
+	&-select {
+		background-color: transparent;
+		border: 0;
+		color: inherit;
+
+		&:focus {
+			border: 0;
+			box-shadow: none;
+		}
+
+		option {
+			color: $primary-color;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		.navbar-nav .nav-link {
+			&:hover,
+			&.active {
+				position: relative;
+
+				&::after {
+					background-color: $primary-btn-bg;
+					bottom: 0;
+					content: '';
+					height: 2px;
+					left: 0;
+					position: absolute;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

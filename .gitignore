@@ -1,0 +1,12 @@
+node_modules/
+npm_cache/
+patternlab.json
+.sass-cache/*
+/sass-cache
+Thumbs.db
+.idea/
+public
+.tmp
+debug.log
+npm-debug.log
+package-lock.json

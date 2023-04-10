@@ -1,0 +1,23 @@
+html[data-theme="light"] {
+	--color-text: #{$primary-color};
+	--color-text-secondary: #{$secondary-color};
+	--color-background: #{$body-bg};
+	--color-dark-btn-bg: #{$primary-color};
+}
+
+html[data-theme="dark"] {
+	--color-text: #{$color-white};
+	--color-text-secondary: #{$color-white};
+	--color-background: #{$primary-color};
+	--color-dark-btn-bg: #{$secondary-color};
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font: 16px/1.5 'Commissioner', sans-serif;
+}
+
+a {
+	transform: 0.3s;
+}

@@ -1,0 +1,16 @@
+.btn {
+	font-weight: 700;
+	
+	&-primary {
+		@include button-variant($primary-btn-bg, darken($primary-btn-bg, 7.5%), $white, lighten($primary-btn-bg, 5%), lighten($primary-btn-bg, 10%), $white);
+	}
+
+	&-dark {
+		@include button-variant($primary-color, darken($primary-color, 7.5%), $white, lighten($primary-color, 10%), lighten($primary-color, 10%), $white);
+	}
+
+	&-outline-secondary {
+		background-color: $color-white;
+		color: $primary-color;
+	}
+}

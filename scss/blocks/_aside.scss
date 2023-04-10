@@ -1,0 +1,29 @@
+.aside {
+	&-nav {
+		i {
+			height: 1em;
+			width: 1em;
+		}
+	
+		.nav-link {
+			color: var(--color-text-secondary);
+			font-weight: 700;
+	
+			&.active {
+				background: $primary-btn-bg;
+				color: $white;
+			}
+	
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.aside {
+		position: sticky;
+		top: 1rem;
+	}
+}
