@@ -27,7 +27,8 @@ function truncateDescription() {
 
 
 // Dark mode
-let checkbox = document.querySelector('input[name=theme_switch]');
+const checkbox = document.querySelector('input[name=theme_switch]');
+const navbar = document.querySelector('.navbar');
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -42,6 +43,12 @@ checkbox.addEventListener('change', (cb) => {
         'data-theme',
         cb.target.checked ? 'dark' : 'light'
     );
+
+    if (cb.target.checked) {
+        navbar.classList.add('navbar-dark');
+    } else {
+        navbar.classList.remove('navbar-dark');
+    }
 });
 
 
