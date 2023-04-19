@@ -1,16 +1,18 @@
-html[data-theme="light"] {
+:root {
 	--color-text: #{$primary-color};
 	--color-text-secondary: #{$secondary-color};
 	--color-background: #{$body-bg};
 	--color-dark-btn-bg: #{$primary-color};
 }
 
-html[data-theme="dark"] {
-	--color-text: #{$color-white};
-	--color-text-secondary: #{$color-white};
-	--color-background: #{$primary-color};
-	--color-dark-btn-bg: #{$secondary-color};
-}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #{$color-white};
+		--color-text-secondary: #{$color-white};
+		--color-background: #{$primary-color};
+		--color-dark-btn-bg: #{$secondary-color};
+	}
+  }
 
 body {
 	background-color: var(--color-background);
@@ -20,4 +22,10 @@ body {
 
 a {
 	transform: 0.3s;
+}
+
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1140px;
+	}
 }

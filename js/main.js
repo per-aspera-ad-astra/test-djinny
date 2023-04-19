@@ -25,33 +25,6 @@ function truncateDescription() {
     }
 }
 
-
-// Dark mode
-const checkbox = document.querySelector('input[name=theme_switch]');
-const navbar = document.querySelector('.navbar');
-
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    checkbox.checked = true;
-} else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    checkbox.checked = false;
-}
-
-checkbox.addEventListener('change', (cb) => {
-    document.documentElement.setAttribute(
-        'data-theme',
-        cb.target.checked ? 'dark' : 'light'
-    );
-
-    if (cb.target.checked) {
-        navbar.classList.add('navbar-dark');
-    } else {
-        navbar.classList.remove('navbar-dark');
-    }
-});
-
-
 // Infinite scroll
 (function () {
 
@@ -79,7 +52,7 @@ checkbox.addEventListener('change', (cb) => {
                         <img src="${item.download_url}" alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title mb-1">Heading</h5>
+                        <h4 class="card-title mb-1">Heading</h4>
                         <p class="card-text mb-2">And here full text doesn’t fit, and at the very end of it we should show a truncatio here goes some sample, example text that is relatively short. And here full text doesn’t fit, and at the very end of it we should show a truncatio here goes some sample, example text that is relatively short.</p>
                     </div>
                     <div class="card-footer p-3">

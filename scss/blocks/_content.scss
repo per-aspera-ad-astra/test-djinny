@@ -6,6 +6,28 @@
 	&-counter {
 		color: var(--color-text-secondary);
 	}
+
+	&-header {
+		.btn-group {
+			border-radius: 0.5rem;
+		}
+
+		.btn {
+			padding: 0.44rem 1rem 0.5rem;
+		}
+
+		.btn-dark {
+			border-bottom-left-radius: 0.5rem;
+			border-top-left-radius: 0.5rem;
+		}
+
+		.btn-outline-secondary {
+			border-bottom-right-radius: 0.5rem;
+			border-top-right-radius: 0.5rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
